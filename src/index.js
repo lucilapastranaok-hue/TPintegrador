@@ -6,6 +6,7 @@
 import express from "express";
 import productRoutes from "./routes/products.routes.js";
 import categoryRoutes from "./routes/categories.routes.js";
+import orderRoutes from "./routes/orders.routes.js";
 
 /**
  * Instancia principal de la aplicacion Express.
@@ -36,3 +37,5 @@ app.use("/api", categoryRoutes);
  */
 app.listen(3000);
 console.log("Server on port", 3000);
+
+app.use("/api", orderRoutes);
